@@ -1,8 +1,5 @@
 import tensorflow as tf
 
-#import tensorflow.compat.v1 as tf
-#tf.disable_v2_behavior()
-
 import os
 import sys
 import random as rd
@@ -17,7 +14,7 @@ from utility.batch_test import *
 from tqdm import tqdm
 
 
-class Mymodel(object):
+class HIID(object):
     def __init__(self, data_config, pretrain_data):
         # argument settings
 
@@ -158,7 +155,6 @@ class Mymodel(object):
         att = []
         for k in range(self.groups1):
             att_temp = tf.matmul(all_embeddings, self.weights['Q_%d' % k])   #[N,64,1]
-
             att += [att_temp]
 
         att = tf.concat(att, axis=2)                                   #[N,64,groups1]
@@ -168,7 +164,6 @@ class Mymodel(object):
         for k in range(self.groups1):
             out_temp = tf.multiply(att[k], all_embeddings)                   #[N,64,layers]
             out_temp = tf.reduce_mean(out_temp, axis=2, keep_dims=False)     #[N,64]
-            #out_temp = self.delta*residual_embeddings + out_temp
             out += [out_temp]
 
         all_embeddings = tf.stack(out, axis=2)
@@ -188,7 +183,6 @@ class Mymodel(object):
         for k in range(self.groups2):
             out_temp1 = tf.multiply(att1[k], all_embeddings)                 #[N,64, self.groups2]
             out_temp1 = tf.reduce_mean(out_temp1, axis=2, keep_dims=False)   #[N, 64]
-            #out_temp1 = out_temp1 + self.delta*residual_embeddings2
             out1 += [out_temp1]
 
         all_embeddings = tf.stack(out1, axis=2)
@@ -368,7 +362,7 @@ class Mymodel(object):
 
 
     def model_save(self, ses):
-        save_pretrain_path = 'D:/WT/HIID/Data/ml1m/ml1m_(421)_(0.1_0.2_0.1_0.2)_(0.7)_NoDiv'
+        save_pretrain_path = '../output_parameters/ml1m'
         np.savez(save_pretrain_path, user_embed=np.array(self.weights['user_embedding'].eval(session=ses)),
                  item_embed=np.array(self.weights['item_embedding'].eval(session=ses)),
                  Q_0=np.array(self.weights['Q_0'].eval(session=ses)),
@@ -393,8 +387,7 @@ class Mymodel(object):
 
 
 def load_best(name="best_model"):
-    #pretrain_path = '%spretrain/%s/%s.npz' % (args.proj_path, args.dataset, name)
-    pretrain_path = "D:\wt\HIID\pretain\citeulike-lightgcn.npz"
+    pretrain_path = '%spretrain/%s/%s.npz' % (args.proj_path, args.dataset, name)
     try:
         pretrain_data = np.load(pretrain_path)
         print('load the best model:', name)
@@ -451,11 +444,7 @@ if __name__ == '__main__':
     else:
         pretrain_data = None
 
-    model = Mymodel(data_config=config, pretrain_data=pretrain_data)
-
-    np.random.seed(3407)
-    rd.seed(3407)
-    tf.set_random_seed(3407)
+    model = HIID(data_config=config, pretrain_data=pretrain_data)
 
     tf_config = tf.ConfigProto()
     tf_config.gpu_options.allow_growth = True
