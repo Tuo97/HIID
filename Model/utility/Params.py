@@ -5,8 +5,8 @@ def parse_args():
     #数据读取
     parser.add_argument('--data_path', nargs='?', default='../Data/',
                         help='Input data path.')
-    parser.add_argument('--dataset', nargs='?', default='last-fm',
-                        help='Choose a dataset from {ml1m, last-fm, amazon-movies}')
+    parser.add_argument('--dataset', nargs='?', default='ml1m',
+                        help='Choose a dataset from {ml1m, ml10m, last-fm, Amazon-Movies}')
     parser.add_argument('--proj_path', nargs='?', default='',
                         help='Project path.')
 
@@ -35,7 +35,7 @@ def parse_args():
     #测试阶段
     parser.add_argument('--show_step', type=int, default=3,
                         help='Test every show_step epochs.')
-    parser.add_argument('--early', type=int, default=3,
+    parser.add_argument('--early', type=int, default=5,
                         help='Step for stopping')
     parser.add_argument('--Ks', nargs='?', default='[20]',
                         help='Metrics scale')
