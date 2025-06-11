@@ -89,16 +89,12 @@ def get_performance(user_pos_test, r, auc, Ks):
 
 
 def test_one_user(x):
-    #note = open('D:/wt/onSSL-mycode/Data/citeulike-a/ranklist.txt', 'a')
 
     # user u's ratings for user u
     rating = x[0]
     # uid
     u = x[1]
     # user u's items in the training set
-
-    # print("用户名称：",u)
-    #note.write(str(u) + ',')
 
     try:
         training_items = data_generator.train_items[u]
