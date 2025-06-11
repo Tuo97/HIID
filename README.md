@@ -9,7 +9,7 @@ Python==3.7.0
 Tensorflow-gpu==1.14.0
 
 # Datasets
-We provide datasets: MovieLens-1M, MovieLens-10M, Last-FM, and Amazon-Movies in file ./Data. 
+We provide datasets: MovieLens-1M, MovieLens-10M, Last-fm, and Amazon-Movies in file ./Data. 
 
 # Citation
 If you find this work helpful to your research, please kindly consider citing our paper.
