@@ -33,4 +33,4 @@ If you find this work helpful to your research, please kindly consider citing ou
 }
 
 # 
-Welcome to follow more of our lab's work on GitHub at https://github.com/BJUTRec/.
+Welcome to follow more of our Lab's works on GitHub at https://github.com/BJUTRec/.
