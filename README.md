@@ -21,7 +21,8 @@ If you find this work helpful to your research, please kindly consider citing ou
   year={2025},
   volume={37},
   number={9},
-  pages={5271-5282},
+  pages={5271-5282}
+}
 ```
 
 # 
