@@ -14,23 +14,17 @@ We provide datasets: MovieLens-1M, MovieLens-10M, Last-fm, and Amazon-Movies in 
 # Citation
 If you find this work helpful to your research, please kindly consider citing our paper.
 
+```
 @ARTICLE{10999074,
-
   author={Wang, Tuo and Jian, Meng and Xu, Xinyi and Wu, Lifang},
-  
   journal={IEEE Transactions on Knowledge and Data Engineering},
-  
   title={Hierarchical Intent-Based Interest Disentanglement for Personalized Recommendation}, 
-  
   year={2025},
-  
   volume={},
-  
-  number={},
-  
+  number={}, 
   pages={1-12},
-  
 }
+```
 
 # 
 Welcome to follow more of our Lab's works on GitHub at https://github.com/BJUTRec/.
