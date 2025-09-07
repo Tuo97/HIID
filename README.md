@@ -1,12 +1,11 @@
 # HIID-Tensorflow
 This work is the Tensorflow implementation for our TKDE 2025 paper:      
-T. Wang, M. Jian, X. Xu and L. Wu, "Hierarchical Intent-Based Interest Disentanglement for Personalized Recommendation," in IEEE Transactions on Knowledge and Data Engineering.
 
-DOI: 10.1109/TKDE.2025.3569097
+> T. Wang, M. Jian, X. Xu and L. Wu, "Hierarchical Intent-Based Interest Disentanglement for Personalized Recommendation," in IEEE Transactions on Knowledge and Data Engineering. DOI: 10.1109/TKDE.2025.3569097
 
 # Environment
-Python==3.7.0
-Tensorflow-gpu==1.14.0
+- Python==3.7.0
+- Tensorflow-gpu==1.14.0
 
 # Datasets
 We provide datasets: MovieLens-1M, MovieLens-10M, Last-fm, and Amazon-Movies in file ./Data. 
