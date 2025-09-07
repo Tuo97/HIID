@@ -25,4 +25,4 @@ If you find this work helpful to your research, please kindly consider citing ou
 ```
 
 # 
-Welcome to follow more of our Lab's works on GitHub at https://github.com/BJUTRec/.
+:mag: Welcome to follow more of our Lab's works on GitHub at https://github.com/BJUTRec/.
