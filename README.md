@@ -17,13 +17,12 @@ If you find this work helpful to your research, please kindly consider citing ou
 ```
 @ARTICLE{10999074,
   author={Wang, Tuo and Jian, Meng and Xu, Xinyi and Wu, Lifang},
-  journal={IEEE Transactions on Knowledge and Data Engineering},
+  journal={IEEE Transactions on Knowledge and Data Engineering}, 
   title={Hierarchical Intent-Based Interest Disentanglement for Personalized Recommendation}, 
   year={2025},
-  volume={},
-  number={}, 
-  pages={1-12},
-}
+  volume={37},
+  number={9},
+  pages={5271-5282},
 ```
 
 # 
